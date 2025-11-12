@@ -1,6 +1,4 @@
 # 2c.SIMULATING ARP /RARP PROTOCOLS
-##  NAME : POOJA P
-## REGISTER NUMBER : 212224230195
 ## AIM
 To write a python program for simulating ARP protocols using TCP.
 ## ALGORITHM:
@@ -17,10 +15,10 @@ To write a python program for simulating ARP protocols using TCP.
 stored.
 4. Read the IP address which is send by the client.
 5. Map the IP address with its MAC address and return the MAC address to client.
-
+P
 ## PROGRAM - ARP
-### server:
-```python
+## Server
+```
 import socket
 s = socket.socket()
 s.bind(('localhost', 8000))
@@ -51,8 +49,8 @@ while True:
 c.close()
 s.close()
 ```
-### client
-```python
+## Client
+```
 import socket
 c = socket.socket()
 c.connect(('localhost', 8000))
@@ -69,20 +67,16 @@ while True:
 c.close()
 
 ```
+## OUPUT - ARP
+## Server
+<img width="637" height="155" alt="image" src="https://github.com/user-attachments/assets/ad13790f-e94c-470d-a8d5-c273ecbddbae" />
 
-## OUTPUT - ARP
-### server:
-
-
-![alt text](image.png)
-### client
-
-![alt text](image-1.png)
-
+## Client
+<img width="705" height="198" alt="image" src="https://github.com/user-attachments/assets/0dd4cde5-06b7-4b11-9e2a-55a92530cca7" />
 
 ## PROGRAM - RARP
-### server
-```python
+## Server
+```
 import socket
 s = socket.socket()
 s.bind(('localhost', 8000))
@@ -111,11 +105,9 @@ while True:
         c.send("Not Found".encode())
 c.close()
 s.close()
-
 ```
-
-### client
-```python
+## Client
+```
 import socket
 c = socket.socket()
 c.connect(('localhost', 8000))
@@ -128,17 +120,16 @@ while True:
     ip = c.recv(1024).decode()
     print(f"IP Address for {mac}: {ip}")
 c.close()
-
-
 ```
+## OUPUT -RARP
+## Server
 
-## OUTPUT -RARP
+<img width="618" height="138" alt="image" src="https://github.com/user-attachments/assets/da4c8c4f-a405-42c8-a47f-14bf63d55725" />
 
-### server
-![alt text](image-3.png)
-### client
+## Client
 
-![alt text](image-2.png)
+<img width="660" height="199" alt="image" src="https://github.com/user-attachments/assets/34647091-9197-4f4d-a80c-d82df2c866e8" />
+
 ## RESULT
 Thus, the python program for simulating ARP protocols using TCP was successfully 
 executed.
